@@ -18,10 +18,13 @@ using System.Threading.Tasks;
 namespace Battleship
 {
     /// <summary>
-    /// Enum for Direction of the Ship
+    /// Interface for Health
     /// </summary>
-    public enum DirectionType
+    internal interface IHealth
     {
-        Vertical, Horizontal
+        int GetMaxHealth();
+        int GetCurrentHealth();
+        bool IsDead();
+        void TakeDamage(Coord2D point);
     }
 }
