@@ -92,15 +92,15 @@ namespace Battleship
             switch(type.ToUpper())
             {
                 case "CARRIER":
-                    return new Carrier(new Coord2D(xCoordinate, yCoordinate), direction);
+                    return new Ships.Carrier(new Coord2D(xCoordinate, yCoordinate), direction);
                 case "BATTLESHIP":
-                    return new Battleship(new Coord2D(xCoordinate, yCoordinate), direction);
+                    return new Ships.Battleship(new Coord2D(xCoordinate, yCoordinate), direction);
                 case "DESTROYER":
-                    return new Destroyer(new Coord2D(xCoordinate, yCoordinate), direction);
+                    return new Ships.Destroyer(new Coord2D(xCoordinate, yCoordinate), direction);
                 case "SUBMARINE":
-                    return new Submarine(new Coord2D(xCoordinate, yCoordinate), direction);
+                    return new Ships.Submarine(new Coord2D(xCoordinate, yCoordinate), direction);
                 case "PATROL BOAT":
-                    return new PatrolBoat(new Coord2D(xCoordinate, yCoordinate), direction);
+                    return new Ships.PatrolBoat(new Coord2D(xCoordinate, yCoordinate), direction);
                 default: throw new ArgumentException();
             }
 

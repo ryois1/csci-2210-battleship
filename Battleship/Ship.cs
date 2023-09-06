@@ -20,7 +20,7 @@ namespace Battleship
     /// <summary>
     /// Abstract Class for Ship
     /// </summary>
-    public abstract class Ship: IHealth
+    public abstract class Ship: IHealth, IInfomatic
     {
         protected List<Coord2D> Points { get; set; }
         public List<Coord2D> DamagedPoints { get; private set; } = new List<Coord2D>();
@@ -141,73 +141,6 @@ namespace Battleship
                     y++;
                 }
             }
-        }
-    }
-
-
-    /// <summary>
-    /// Carrier Ship overrides
-    /// </summary>
-    public class Carrier : Ship
-    {
-        public Carrier(Coord2D position, DirectionType direction) : base(position, direction, 5) { }
-
-        public override string GetName()
-        {
-            return "Carrier";
-        }
-    }
-
-    /// <summary>
-    /// Battleship Ship overrides
-    /// </summary>
-    public class Battleship : Ship
-    {
-        public Battleship(Coord2D position, DirectionType direction) : base(position, direction, 4) { }
-
-        public override string GetName()
-        {
-            return "Battleship";
-        }
-    }
-
-    /// <summary>
-    /// Destroyer Ship overrides
-    /// </summary>
-    public class Destroyer : Ship
-    {
-        public Destroyer(Coord2D position, DirectionType direction) : base(position, direction, 3) { }
-
-        public override string GetName()
-        {
-            return "Destroyer";
-        }
-    }
-
-
-    /// <summary>
-    /// Submarine Ship overrides
-    /// </summary>
-    public class Submarine : Ship
-    {
-        public Submarine(Coord2D position, DirectionType direction) : base(position, direction, 3) { }
-
-        public override string GetName()
-        {
-            return "Submarine";
-        }
-    }
-
-    /// <summary>
-    /// PatrolBoat Ship overrides
-    /// </summary>
-    public class PatrolBoat : Ship
-    {
-        public PatrolBoat(Coord2D position, DirectionType direction) : base(position, direction, 2) { }
-
-        public override string GetName()
-        {
-            return "Patrol Boat";
         }
     }
 }
