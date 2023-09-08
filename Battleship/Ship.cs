@@ -115,8 +115,7 @@ namespace Battleship
         /// <returns>Text form</returns>
         public string GetInfo()
         {
-            return $"Name: {GetName()}, Max Health: {GetMaxHealth()}, Current Health: {GetCurrentHealth()}, Is Dead: {IsDead()}, " +
-                   $"Position: ({Position.x}, {Position.y}), Length: {Length}, Direction: {Direction}";
+            return $"Name: {GetName()}, Max Health: {GetMaxHealth()}, Current Health: {GetCurrentHealth()}, Is Dead: {IsDead()}, Position: ({Position.x}, {Position.y}), Length: {Length}, Direction: {Direction}";
         }
 
         /// <summary>

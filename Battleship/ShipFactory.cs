@@ -126,8 +126,12 @@ namespace Battleship
         {
             List<Ship> ships = new List<Ship>();
 
-            foreach (string line in File.ReadLines(filePath))
+            StreamReader sr = new StreamReader(filePath);
+
+            while (!sr.EndOfStream)
             {
+                string line = sr.ReadLine();
+                if (line == null) { continue ; }
                 if (!line.TrimStart().StartsWith("#"))
                 {
                     if (VerifyShipString(line))
